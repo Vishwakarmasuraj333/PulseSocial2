@@ -44,6 +44,7 @@ export async function proxy(request: NextRequest) {
   }
 
   if (
+    nextUrl.pathname === '/' ||
     nextUrl.pathname.startsWith('/uploads/') ||
     nextUrl.pathname.startsWith('/p/') ||
     nextUrl.pathname.startsWith('/provider/') ||
@@ -52,6 +53,14 @@ export async function proxy(request: NextRequest) {
     // itself (sign in and come back, or connect a self-hosted instance)
     nextUrl.pathname.startsWith('/oauth/authorize')
   ) {
+    if (nextUrl.pathname === '/' && authCookie) {
+      return NextResponse.redirect(
+        new URL(
+          !!process.env.IS_GENERAL ? '/launches' : `/analytics`,
+          nextUrl.href
+        )
+      );
+    }
     return topResponse;
   }
 
@@ -98,7 +107,7 @@ export async function proxy(request: NextRequest) {
       ? ''
       : (url.indexOf('?') > -1 ? '&' : '?') +
         `provider=${(findIndex === 'settings'
-          ? process.env.POSTIZ_GENERIC_OAUTH
+          ? (process.env.PULSESOCIAL_GENERIC_OAUTH || process.env.POSTIZ_GENERIC_OAUTH)
             ? 'generic'
             : 'github'
           : findIndex

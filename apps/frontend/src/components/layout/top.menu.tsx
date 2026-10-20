@@ -159,7 +159,7 @@ export const useMenuItem = () => {
           />
         </svg>
       ),
-      path: 'https://affiliate.postiz.com',
+      path: process.env.NEXT_PUBLIC_AFFILIATE_URL || '/billing',
       role: ['ADMIN', 'SUPERADMIN', 'USER'],
       requireBilling: true,
     },
@@ -214,6 +214,25 @@ export const useMenuItem = () => {
       ),
       path: '/settings',
       role: ['ADMIN', 'USER', 'SUPERADMIN'],
+    },
+    {
+      name: t('admin', 'Admin'),
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="21"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z"
+            fill="currentColor"
+          />
+        </svg>
+      ),
+      path: '/admin',
+      role: ['ADMIN', 'SUPERADMIN'],
     },
   ] satisfies MenuItemInterface[] as MenuItemInterface[];
 
@@ -276,7 +295,10 @@ export const TopMenu: FC = () => {
               return false;
             }
             if (f.role) {
-              return f.role.includes(user?.role!);
+              return (
+                f.role.includes(user?.role!) ||
+                (f.path === '/admin' && (!!user?.admin || user?.role === 'SUPERADMIN' || user?.role === 'ADMIN'))
+              );
             }
             return true;
           })

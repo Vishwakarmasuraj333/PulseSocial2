@@ -22,13 +22,15 @@ const nextConfig = {
   },
   reactStrictMode: false,
   transpilePackages: ['crypto-hash'],
-  // Enable production sourcemaps for Sentry
-  productionBrowserSourceMaps: true,
+  // Disable memory-heavy browser sourcemaps in standard dev/build
+  productionBrowserSourceMaps: !!process.env.SENTRY_AUTH_TOKEN,
 
-  // Custom webpack config to ensure sourcemaps are generated properly
+  // Custom webpack config to optimize memory and stability
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
-    // Enable sourcemaps for both client and server in production
-    if (!dev) {
+    if (dev) {
+      // Disable webpack filesystem cache in dev to avoid RangeError Array buffer allocation failed on Windows
+      config.cache = false;
+    } else if (process.env.SENTRY_AUTH_TOKEN) {
       config.devtool = isServer ? 'source-map' : 'hidden-source-map';
     }
 
@@ -57,10 +59,11 @@ const nextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
-  authToken: process.env.SENTRY_AUTH_TOKEN,
+export default process.env.SENTRY_AUTH_TOKEN
+  ? withSentryConfig(nextConfig, {
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
 
   // Sourcemap configuration optimized for monorepo
   sourcemaps: {
@@ -109,4 +112,4 @@ export default withSentryConfig(nextConfig, {
     // Don't fail the build if Sentry upload fails in monorepo context
     return;
   },
-});
+}) : nextConfig;

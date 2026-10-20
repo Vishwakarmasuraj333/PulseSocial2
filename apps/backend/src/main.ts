@@ -33,6 +33,8 @@ async function start() {
         'impersonate',
         'x-postiz-org',
         'x-postiz-include-deleted',
+        'x-pulsesocial-org',
+        'x-pulsesocial-include-deleted',
         'x-copilotkit-runtime-client-gql-version',
       ],
       exposedHeaders: [

@@ -8,6 +8,7 @@ const STORAGE_KEY = 'refreshEntries';
 
 const ALLOWED_ORIGIN_PATTERNS = [
   /^https?:\/\/localhost(:\d+)?$/,
+  /^https?:\/\/([a-z0-9-]+\.)*pulsesocial\.com$/,
   /^https?:\/\/([a-z0-9-]+\.)*postiz\.com$/,
 ];
 

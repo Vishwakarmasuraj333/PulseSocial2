@@ -9,12 +9,14 @@ export class MastraService {
   static mastra: Mastra;
   constructor(private _loadToolsService: LoadToolsService) {}
   async mastra() {
+    const agentInstance = await this._loadToolsService.agent();
     MastraService.mastra =
       MastraService.mastra ||
       new Mastra({
         storage: pStore,
         agents: {
-          postiz: await this._loadToolsService.agent(),
+          pulsesocial: agentInstance,
+          postiz: agentInstance,
         },
         logger: new ConsoleLogger({
           level: 'info',

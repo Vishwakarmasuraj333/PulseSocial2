@@ -3,8 +3,8 @@ import { LaunchesComponent } from '@gitroom/frontend/components/launches/launche
 import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz Calendar' : 'Gitroom Launches'}`,
-  description: '',
+  title: 'PulseSocial — Publishing Studio & Calendar',
+  description: 'Manage, schedule, and publish posts across all your connected social networks.',
 };
 export default async function Index() {
   return <LaunchesComponent />;

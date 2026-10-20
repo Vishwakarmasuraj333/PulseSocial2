@@ -33,11 +33,25 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <title>PulseSocial &mdash; Enterprise Social Media Command Center</title>
+        <meta
+          name="description"
+          content="PulseSocial is a premier social media management platform by Pulse Media Global, developed by Suraj Vishwakarma. Schedule, publish, analyze, and manage 28+ social channels."
+        />
+        <meta property="og:title" content="PulseSocial — Enterprise Social Media Management" />
+        <meta
+          property="og:description"
+          content="Unified social publishing, scheduling, analytics, and inbox across all major networks."
+        />
+        <meta property="og:site_name" content="PulseSocial" />
+        <meta name="author" content="Suraj Vishwakarma" />
+        <meta name="creator" content="Pulse Media Global" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
         {!!process.env.DATAFAST_WEBSITE_ID && (
           <Script
             data-website-id={process.env.DATAFAST_WEBSITE_ID}
-            data-domain="postiz.com"
+            data-domain={process.env.NEXT_PUBLIC_APP_DOMAIN || "pulsesocial.com"}
             src="https://datafa.st/js/script.js"
             strategy="afterInteractive"
           />
@@ -60,9 +74,20 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
           discordUrl={process.env.NEXT_PUBLIC_DISCORD_SUPPORT!}
           frontEndUrl={process.env.FRONTEND_URL!}
           isGeneral={!!process.env.IS_GENERAL}
-          genericOauth={!!process.env.POSTIZ_GENERIC_OAUTH}
-          oauthLogoUrl={process.env.NEXT_PUBLIC_POSTIZ_OAUTH_LOGO_URL!}
-          oauthDisplayName={process.env.NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME!}
+          genericOauth={
+            !!process.env.PULSESOCIAL_GENERIC_OAUTH ||
+            !!process.env.POSTIZ_GENERIC_OAUTH
+          }
+          oauthLogoUrl={
+            process.env.NEXT_PUBLIC_PULSESOCIAL_OAUTH_LOGO_URL ||
+            process.env.NEXT_PUBLIC_POSTIZ_OAUTH_LOGO_URL ||
+            '/logo.svg'
+          }
+          oauthDisplayName={
+            process.env.NEXT_PUBLIC_PULSESOCIAL_OAUTH_DISPLAY_NAME ||
+            process.env.NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME ||
+            'PulseSocial'
+          }
           uploadDirectory={process.env.NEXT_PUBLIC_UPLOAD_STATIC_DIRECTORY!}
           cloudflareUrl={process.env.CLOUDFLARE_BUCKET_URL || ''}
           mainUrl={process.env.MAIN_URL || ''}
@@ -101,7 +126,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
             <FacebookComponent />
             <GoogleTagManagerComponent gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
             <Plausible
-              domain={!!process.env.IS_GENERAL ? 'postiz.com' : 'gitroom.com'}
+              domain={process.env.NEXT_PUBLIC_APP_DOMAIN || 'pulsesocial.com'}
             >
               <LayoutContext>
                 <UtmSaver />

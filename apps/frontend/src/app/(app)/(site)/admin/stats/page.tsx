@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Admin Stats`,
-  description: '',
+  title: 'PulseSocial — Admin Analytics & Stats',
+  description: 'PulseSocial administrative insights, tenant statistics, and platform metrics.',
 };
 
 export default async function Page() {

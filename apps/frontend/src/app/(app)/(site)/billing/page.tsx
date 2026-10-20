@@ -3,8 +3,8 @@ import { BillingComponent } from '@gitroom/frontend/components/billing/billing.c
 import { Metadata } from 'next';
 import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Billing`,
-  description: '',
+  title: 'PulseSocial — Billing & Subscriptions',
+  description: 'Manage your PulseSocial subscription plan, invoices, and billing details.',
 };
 export default async function Page() {
   return (

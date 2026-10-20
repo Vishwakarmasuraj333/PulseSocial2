@@ -279,7 +279,34 @@ export const PlatformAnalytics = () => {
         </div>
       </div>
       <div className="bg-newBgColorInner flex-1 flex-col flex p-[20px] mobile:p-[12px] gap-[12px]">
-        {!!options.length && (
+        {isLoading ? (
+          <div className="flex-1 flex items-center justify-center">
+            <LoadingComponent />
+          </div>
+        ) : !sortedIntegrations.length ? (
+          <div className="flex-1 flex flex-col items-center justify-center text-center p-[40px] max-w-[500px] mx-auto">
+            <div className="w-[64px] h-[64px] rounded-full bg-[#10b981]/10 flex items-center justify-center text-[#10b981] mb-[16px]">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </div>
+            <h3 className="text-[20px] font-semibold text-newTextColor mb-[8px]">
+              {t('no_channels_connected', 'No Social Channels Connected')}
+            </h3>
+            <p className="text-[14px] text-textItemBlur mb-[24px]">
+              {t(
+                'connect_channels_analytics_desc',
+                'Connect your social media accounts to sync real reach, impressions, audience engagement, and follower growth.'
+              )}
+            </p>
+            <Button
+              className="bg-[#10b981] hover:bg-[#059669] text-white px-[20px] py-[10px] rounded-[8px] font-medium transition-colors"
+              onClick={() => router.push('/launches')}
+            >
+              {t('connect_social_channels', 'Connect Social Channels')}
+            </Button>
+          </div>
+        ) : !!options.length ? (
           <div className="flex-1 flex flex-col gap-[14px]">
             <div className="max-w-[200px]">
               <Select
@@ -302,7 +329,7 @@ export const PlatformAnalytics = () => {
               )}
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

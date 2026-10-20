@@ -15,7 +15,10 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <title>PulseSocial &mdash; Social Channel Connect</title>
+        <meta name="description" content="Connect your social media accounts and authorization flows with PulseSocial." />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <link rel="alternate icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
         className={clsx(jakartaSans.className, 'dark text-primary !bg-primary')}
@@ -33,9 +36,20 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
           discordUrl={process.env.NEXT_PUBLIC_DISCORD_SUPPORT!}
           frontEndUrl={process.env.FRONTEND_URL!}
           isGeneral={!!process.env.IS_GENERAL}
-          genericOauth={!!process.env.POSTIZ_GENERIC_OAUTH}
-          oauthLogoUrl={process.env.NEXT_PUBLIC_POSTIZ_OAUTH_LOGO_URL!}
-          oauthDisplayName={process.env.NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME!}
+          genericOauth={
+            !!process.env.PULSESOCIAL_GENERIC_OAUTH ||
+            !!process.env.POSTIZ_GENERIC_OAUTH
+          }
+          oauthLogoUrl={
+            process.env.NEXT_PUBLIC_PULSESOCIAL_OAUTH_LOGO_URL ||
+            process.env.NEXT_PUBLIC_POSTIZ_OAUTH_LOGO_URL ||
+            '/logo.svg'
+          }
+          oauthDisplayName={
+            process.env.NEXT_PUBLIC_PULSESOCIAL_OAUTH_DISPLAY_NAME ||
+            process.env.NEXT_PUBLIC_POSTIZ_OAUTH_DISPLAY_NAME ||
+            'PulseSocial'
+          }
           uploadDirectory={process.env.NEXT_PUBLIC_UPLOAD_STATIC_DIRECTORY!}
           cloudflareUrl={process.env.CLOUDFLARE_BUCKET_URL || ''}
           mainUrl={process.env.MAIN_URL || ''}

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { Agent } from '@gitroom/frontend/components/agents/agent';
 export const metadata: Metadata = {
-  title: 'Postiz - Agent',
-  description: 'agents',
+  title: 'PulseSocial — AI Social Agents & Copilot',
+  description: 'AI-assisted content generation and social automation agents.',
 };
 export default async function Layout({
   children,

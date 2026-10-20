@@ -145,11 +145,13 @@ export function RegisterAfter({
         }
       })
       .catch((e) => {
+        const isFetchErr =
+          e?.toString()?.includes('Failed to fetch') ||
+          e?.message?.includes('Failed to fetch');
         form.setError('email', {
-          message:
-            'General error: ' +
-            e.toString() +
-            '. Please check your browser console.',
+          message: isFetchErr
+            ? 'Cannot connect to PulseSocial Backend API at http://localhost:3000. Please ensure the backend server and database are running.'
+            : 'General error: ' + e.toString(),
         });
       });
   };
@@ -192,6 +194,18 @@ export function RegisterAfter({
               </div>
             )}
             <div className="flex flex-col gap-[12px]">
+              <button
+                type="button"
+                onClick={() => {
+                  form.setValue('company', 'Pulse Media Creator Lab');
+                  form.setValue('email', 'creator@pulsesocial.com');
+                  form.setValue('password', 'pulse@pass2026');
+                }}
+                className="w-full mb-2 py-2 px-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer"
+              >
+                <span>⚡</span>
+                <span>Auto-Fill Sample Creator Registration</span>
+              </button>
               <div className="text-textColor">
                 {!isAfterProvider && (
                   <>
@@ -228,7 +242,7 @@ export function RegisterAfter({
                 )}
                 &nbsp;
                 <a
-                  href={`https://postiz.com/terms`}
+                  href={`https://pulsesocial.com/terms`}
                   className="underline hover:font-bold"
                   rel="nofollow"
                 >
@@ -237,7 +251,7 @@ export function RegisterAfter({
                 &nbsp;
                 {t('and', 'and')}&nbsp;
                 <a
-                  href={`https://postiz.com/privacy`}
+                  href={`https://pulsesocial.com/privacy`}
                   rel="nofollow"
                   className="underline hover:font-bold"
                 >
@@ -254,6 +268,13 @@ export function RegisterAfter({
                   >
                     {t('create_account', 'Create Account')}
                   </Button>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 mt-4 pt-3 border-t border-slate-800/80">
+                  <span>✓ 14-day free trial</span>
+                  <span>&bull;</span>
+                  <span>No credit card required</span>
+                  <span>&bull;</span>
+                  <span>Instant setup</span>
                 </div>
                 <p className="mt-4 text-sm">
                   {t('already_have_an_account', 'Already Have An Account?')}

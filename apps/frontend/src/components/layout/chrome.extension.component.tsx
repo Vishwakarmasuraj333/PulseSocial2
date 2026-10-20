@@ -6,8 +6,14 @@ export const ChromeExtensionComponent = () => {
   }
   return (
     <a
-      href="https://chromewebstore.google.com/detail/postiz/cidhffagahknaeodkplfbcpfeielnkjl"
+      href={
+        process.env.NEXT_PUBLIC_CHROME_EXTENSION_URL ||
+        'https://chromewebstore.google.com/detail/pulsesocial'
+      }
       target="_blank"
+      rel="noopener noreferrer"
+      aria-label="PulseSocial Browser Extension"
+      title="PulseSocial Browser Extension"
       className="hover:text-newTextColor"
     >
       <svg

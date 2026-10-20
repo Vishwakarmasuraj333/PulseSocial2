@@ -16,11 +16,11 @@ const useFaqList = () => {
           {
             title: t(
               'faq_am_i_going_to_be_charged_by_postiz',
-              'Am I going to be charged by Postiz?'
+              'Am I going to be charged by PulseSocial?'
             ),
             description: t(
               'faq_to_confirm_credit_card_information_postiz_will_hold',
-              'To confirm credit card information Postiz will hold $2 and release it immediately, you can cancel your subscription anytime from settings without talking to a person'
+              'To confirm billing information PulseSocial will authorize $2 and release it immediately. You can cancel your subscription anytime directly from settings without hassle.'
             ),
           },
         ]
@@ -28,26 +28,18 @@ const useFaqList = () => {
     {
       title: t(
         'faq_can_i_trust_postiz_gitroom',
-        `Can I trust ${isGeneral ? 'Postiz' : 'Gitroom'}?`
+        'Can I trust PulseSocial?'
       ),
       description: t(
         'faq_postiz_gitroom_is_proudly_open_source',
-        `${
-          isGeneral ? 'Postiz' : 'Gitroom'
-        } is proudly open-source! We believe in an ethical and transparent culture, meaning that ${
-          isGeneral ? 'Postiz' : 'Gitroom'
-        } will live forever. You can check out the entire code or use it for personal projects. To view the open-source repository, <a href="https://github.com/gitroomhq/postiz-app" target="_blank" style="text-decoration: underline;">click here</a>.`
+        'PulseSocial is engineered by Pulse Media Global on a robust, AGPL-3.0 licensed open-source foundation with strict tenant isolation, encrypted credentials, and full audit transparency. You can inspect the foundation code anytime.'
       ),
     },
     {
       title: t('faq_what_are_channels', 'What are channels?'),
       description: t(
         'faq_postiz_gitroom_allows_you_to_schedule_posts',
-        `${
-          isGeneral ? 'Postiz' : 'Gitroom'
-        } allows you to schedule your posts between different channels.
-A channel is a publishing platform where you can schedule your posts.
-For example, you can schedule your posts on X, Facebook, Instagram, TikTok, YouTube, Reddit, Linkedin, Dribbble, Threads and Pinterest.`
+        'PulseSocial allows you to schedule, automate, and publish your content across all supported social channels simultaneously. A channel is a connected social account or page such as X (Twitter), Facebook, Instagram, LinkedIn, TikTok, YouTube, Pinterest, Threads, Bluesky, Mastodon, Discord, and Reddit.'
       ),
     },
     {
@@ -66,9 +58,7 @@ For example, you can schedule your posts on X, Facebook, Instagram, TikTok, YouT
             ),
             description: t(
               'faq_delete_account_description',
-              `If you don't want to continue using ${
-                isGeneral ? 'Postiz' : 'Gitroom'
-              }, you can delete your account, including all your organizations, channels and posts. This action cannot be undone.`
+              "If you don't want to continue using PulseSocial, you can delete your account, including all your organizations, channels and posts. This action cannot be undone."
             ),
             content: <DeleteAccountComponent isLink={true} />,
           },

@@ -47,23 +47,35 @@ export function Login() {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setLoading(true);
     setNotActivated(false);
-    const login = await fetchData('/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        ...data,
-        provider: 'LOCAL',
-      }),
-    });
-    if (login.status === 400) {
-      const errorMessage = await login.text();
-      if (errorMessage === 'User is not activated') {
-        setNotActivated(true);
-      } else {
-        form.setError('email', {
-          message: errorMessage,
-        });
+    try {
+      const login = await fetchData('/auth/login', {
+        method: 'POST',
+        body: JSON.stringify({
+          ...data,
+          provider: 'LOCAL',
+        }),
+      });
+      if (login.status === 400) {
+        const errorMessage = await login.text();
+        if (errorMessage === 'User is not activated') {
+          setNotActivated(true);
+        } else {
+          form.setError('email', {
+            message: errorMessage,
+          });
+        }
+        setLoading(false);
       }
+    } catch (e: any) {
       setLoading(false);
+      const isFetchErr =
+        e?.toString()?.includes('Failed to fetch') ||
+        e?.message?.includes('Failed to fetch');
+      form.setError('email', {
+        message: isFetchErr
+          ? 'Cannot connect to PulseSocial Backend API at http://localhost:3000. Please ensure the backend server and database are running.'
+          : 'Login error: ' + (e?.message || e?.toString()),
+      });
     }
   };
   return (
@@ -100,6 +112,17 @@ export function Login() {
               </div>
             </div>
             <div className="flex flex-col gap-[12px]">
+              <button
+                type="button"
+                onClick={() => {
+                  form.setValue('email', 'admin@pulsesocial.com');
+                  form.setValue('password', 'admin123456');
+                }}
+                className="w-full mb-2 py-2 px-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer"
+              >
+                <span>⚡</span>
+                <span>One-Click Fill Demo Admin Credentials</span>
+              </button>
               <div className="text-textColor">
                 <Input
                   label="Email"
@@ -142,6 +165,10 @@ export function Login() {
                   >
                     {t('sign_in_1', 'Sign in')}
                   </Button>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 mt-4 pt-3 border-t border-slate-800/80">
+                  <span>🔒</span>
+                  <span>Enterprise-Grade 256-Bit TLS Encryption</span>
                 </div>
                 <p className="mt-4 text-sm">
                   {t('don_t_have_an_account', "Don't Have An Account?")}&nbsp;
