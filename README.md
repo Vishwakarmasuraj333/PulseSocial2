@@ -1,183 +1,219 @@
 <p align="center">
-  <a href="https://postiz.com/" target="_blank">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/765e9d72-3ee7-4a56-9d59-a2c9befe2311">
-    <img alt="Postiz Logo" src="https://github.com/user-attachments/assets/f0d30d70-dddb-4142-8876-e9aa6ed1cb99" width="280"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vishwakarmasuraj333/PulseSocial2/main/apps/frontend/public/logo.svg">
+    <img alt="PulseSocial Logo" src="https://raw.githubusercontent.com/Vishwakarmasuraj333/PulseSocial2/main/apps/frontend/public/logo.svg" width="96"/>
   </picture>
+</p>
+
+<h1 align="center">PulseSocial</h1>
+
+<p align="center">
+  <strong>Next-Generation Enterprise Social Media Command Center &amp; Autonomous Publishing Platform</strong><br>
+  <em>Schedule, automate, publish, and analyze content across 38+ social networks with AI Content Copilot.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Vishwakarmasuraj333/PulseSocial2/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL%203.0-10b981.svg" alt="License: AGPL-3.0">
   </a>
-</p>
-
-<p align="center">
-<a href="https://opensource.org/license/agpl-v3">
-  <img src="https://img.shields.io/badge/License-AGPL%203.0-blue.svg" alt="License">
-</a>
-</p>
-
-<div align="center">
-  <strong>
-    <a href="https://postiz.com">Postiz</a> is a social media management platform for scheduling, automating, and analyzing your content.
-    
-  Use Postiz Cloud for a fully managed experience, or deploy the open-source edition on your own infrastructure.
-  </strong>
-</div>
-
-<p align="center">
-  <br />
-  <a href="https://docs.postiz.com" rel="dofollow"><strong>Explore the docs »</strong></a>
-  <br />
-
-  <br />
-  <a href="https://youtube.com/@postizofficial" rel="dofollow"><strong>Watch the YouTube Tutorials»</strong></a>
-  <br />
-</p>
-
-<p align="center">
-  <a href="https://platform.postiz.com">Register</a>
-  ·
-  <a href="https://discord.postiz.com">Join Our Discord (devs only)</a>
-  ·
-  <a href="https://docs.postiz.com/public-api">Public API</a><br />
-</p>
-<p align="center">
-  <a href="https://www.npmjs.com/package/@postiz/node">NodeJS SDK</a>
-  ·
-  <a href="https://www.npmjs.com/package/n8n-nodes-postiz">N8N custom node</a>
-  ·
-  <a href="https://apps.make.com/postiz">Make.com integration</a>
-</p>
-
-<br />
-
-<p align="center"><strong>Schedule posts to:</strong></p>
-<div class="flex" align="center">
-  <img alt="Instagram" src="https://postiz.com/svgs/socials/Instagram.svg" width="32">
-  <img alt="Youtube" src="https://postiz.com/svgs/socials/Youtube.svg" width="32">
-  <img alt="Dribbble" src="https://postiz.com/svgs/socials/Dribbble.svg" width="32">
-  <img alt="Linkedin" src="https://postiz.com/svgs/socials/Linkedin.svg" width="32">
-  <img alt="Reddit" src="https://postiz.com/svgs/socials/Reddit.svg" width="32">
-  <img alt="TikTok" src="https://postiz.com/svgs/socials/TikTok.svg" width="32">
-  <img alt="Facebook" src="https://postiz.com/svgs/socials/Facebook.svg" width="32">
-  <img alt="Pinterest" src="https://postiz.com/svgs/socials/Pinterest.svg" width="32">
-  <img alt="Threads" src="https://postiz.com/svgs/socials/Threads.svg" width="32">
-  <img alt="X" src="https://postiz.com/svgs/socials/X.svg" width="32">
-  <img alt="Slack" src="https://postiz.com/svgs/socials/Slack.svg" width="32">
-  <img alt="Discord" src="https://postiz.com/svgs/socials/Discord.svg" width="32">
-  <img alt="Mastodon" src="https://postiz.com/svgs/socials/Mastodon.svg" width="32">
-  <img alt="Bluesky" src="https://postiz.com/svgs/socials/Bluesky.svg" width="32">
-</div>
-
-<p align="center"><strong>With your favorite AI agent:</strong></p>
-<div class="flex" align="center">
-  <a href="https://postiz.com/chatgpt" title="ChatGPT"><img alt="ChatGPT" src=".github/agents/chatgpt.svg" width="32"></a>
-  <a href="https://postiz.com/claude" title="Claude"><img alt="Claude" src=".github/agents/claude.svg" width="32"></a>
-  <a href="https://postiz.com/claude-code" title="Claude Code"><img alt="Claude Code" src=".github/agents/claude-code.svg" width="32"></a>
-  <a href="https://postiz.com/codex" title="Codex"><img alt="Codex" src=".github/agents/codex.svg" width="32"></a>
-  <a href="https://postiz.com/cursor" title="Cursor"><img alt="Cursor" src=".github/agents/cursor.svg" width="32"></a>
-  <a href="https://postiz.com/openclaw" title="OpenClaw"><img alt="OpenClaw" src=".github/agents/openclaw.svg" width="32"></a>
-  <a href="https://postiz.com/hermes" title="Hermes Agent"><img alt="Hermes Agent" src=".github/agents/hermes-agent.svg" width="32"></a>
-  <a href="https://postiz.com/grok-bot" title="Grok Bot"><img alt="Grok Bot" src=".github/agents/grok-bot.svg" width="32"></a>
-  <a href="https://postiz.com/grok-build" title="Grok Build"><img alt="Grok Build" src=".github/agents/grok-build.svg" width="32"></a>
-  <a href="https://postiz.com/muse" title="Muse"><img alt="Muse" src=".github/agents/muse.svg" width="32"></a>
-  <a href="https://postiz.com/perplexity-computer" title="Perplexity Computer"><img alt="Perplexity Computer" src=".github/agents/perplexity-computer.svg" width="32"></a>
-  <a href="https://postiz.com/nanoclaw" title="nanoclaw"><img alt="nanoclaw" src=".github/agents/nanoclaw.svg" width="32"></a>
-  <a href="https://postiz.com/paperclip" title="Paperclip"><img alt="Paperclip" src=".github/agents/paperclip.svg" width="32"></a>
-  <a href="https://postiz.com/mcp" title="MCP Server"><img alt="MCP Server" src=".github/agents/mcp-server.svg" width="32"></a>
-  <a href="https://postiz.com/agent" title="AI Agents CLI"><img alt="AI Agents CLI" src=".github/agents/ai-agents-cli.svg" width="32"></a>
-</div>
-
-<br />
-
-## 🔌 See the leading Postiz features
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=BdsCVvEYgHU" target="_blank">
-    <img alt="Postiz" src="https://github.com/user-attachments/assets/8b9b7939-da1a-4be5-95be-42c6fce772de" />
+  <a href="https://github.com/Vishwakarmasuraj333/PulseSocial2">
+    <img src="https://img.shields.io/badge/Platform-PulseSocial%20v2.0-0ea5e9.svg" alt="Platform Version">
   </a>
+  <a href="https://github.com/Vishwakarmasuraj333">
+    <img src="https://img.shields.io/badge/Architect-Suraj%20Vishwakarma-8b5cf6.svg" alt="Lead Architect">
+  </a>
+  <a href="https://github.com/Vishwakarmasuraj333/PulseSocial2">
+    <img src="https://img.shields.io/badge/Organization-Pulse%20Media%20Global-f59e0b.svg" alt="Organization">
+  </a>
+  <img src="https://img.shields.io/badge/Connectors-38%2B%20Networks-emerald.svg" alt="38+ Networks">
 </p>
 
+---
 
-# Intro
+## 🌟 Overview
 
-- Schedule all your social media posts (many AI features)
-- Measure your work with analytics.
-- Collaborate with other team members to exchange or buy posts.
-- Invite your team members to collaborate, comment, and schedule posts.
-- Perfect for automation (API) with platforms like N8N, Make.com, Zapier, etc.
+**PulseSocial** is a unified, high-performance social media command center engineered by **Suraj Vishwakarma** and **Pulse Media Global**. Inspired by Buffer and Hootsuite, it is designed for creators, marketing agencies, and global brands to schedule, publish, analyze, and automate their digital footprint across **38+ social platforms**.
 
-## Tech Stack
+PulseSocial combines **temporal workflow execution**, **Redis BullMQ queuing**, **Prisma ORM multi-tenant database isolation**, and **autonomous AI agents** (OpenAI GPT-4o / Claude 3.5) into a state-of-the-art SaaS platform.
 
-- Pnpm workspaces (Monorepo)
-- NextJS (React)
-- NestJS
-- Prisma (Default to PostgreSQL)
-- Temporal
-- Resend (email notifications)
+---
 
-## Quick Start
+## ⚡ Key Highlights
 
-To have the project up and running, please follow the [Quick Start Guide](https://docs.postiz.com/quickstart)
+### 🛡️ Enterprise Admin Command Center (`/admin`)
+* **Real-Time Platform Governance**: Full visibility into active tenants, connected channels, and published posts with live KPI metrics.
+* **Tenant & Organization Management (CRUD)**:
+  * Live search and filtering by subscription plan (*Enterprise Agency, Autopilot Pro, Team, Community*).
+  * Interactive modal to create and provision new client tenants.
+  * Instant status toggle (*Active / Suspended*) and one-click workspace impersonation.
+* **38+ Social Connectors Health Matrix**:
+  * Live API latency ping tester (e.g. `142ms - HTTP 200 OK`).
+  * Per-platform maintenance mode switches.
+* **Deep System Diagnostics**:
+  * Real-time automated health checks across PostgreSQL, Redis BullMQ, Temporal Workflow Engine, Cloudflare R2 Edge, and AI Copilot.
+* **Broadcast Announcements & Gatekeeper**:
+  * Publish real-time alert banners across all client dashboards.
+  * Toggle public registrations on or off with a single click.
+* **Audit Reporting**: Export platform health and tenant directory as downloadable `.json` reports.
 
-## Sponsor Postiz
+### 🔐 Modern Authentication & Onboarding (`/auth/login` & `/auth`)
+* **Seamless Tab Navigation**: Smooth switching between **`[ 🔐 Sign In ]`** and **`[ ✨ Create Account ]`**.
+* **Password Show/Hide**: Built-in eye toggle (`👁️` / `👁️‍🗨️`) on password inputs.
+* **One-Click Quick Credentials**:
+  * ⚡ **SuperAdmin**: `admin@pulsesocial.com` / `admin123456`
+  * 🚀 **Creator/Agency**: `creator@pulsesocial.com` / `pulse@pass2026`
+* **🚀 Instant Demo SuperAdmin Mode**:
+  * Instant 1-click preview mode allowing immediate exploration of the platform and Admin Hub without local database configuration.
+* **Password Strength Meter**: 3-stage visual security meter (*Weak 🔴 / Medium 🟡 / Strong 🟢*) during registration.
+* **Remember Me**: Persistent 30-day session cookies.
 
-We now offer a few options to sponsor Postiz:
-- Just a donation: You like what we are building, and want to buy us some coffee so we can build faster.
-- Main repository: Get your logo with a backlink from the main Postiz repository. Postiz has over 7M downloads and 20k views per month.
+### 📅 Multi-Network Publishing & Calendar
+* Visual drag-and-drop editorial calendar.
+* Support for single posts, thread storms, carousels, reels, and video clips.
+* Dynamic timezone normalization per organization.
+* First-comment automation, link shorteners, and UTM campaign tagging.
 
-Link: https://opencollective.com/postiz
+### 🤖 Autonomous AI Content Copilot
+* Generate engaging hooks, threads, caption variations, and hashtags with GPT-4o & Claude 3.5.
+* Automated tone switching: Professional, Viral Creator, Agency, or Casual.
+* Repurpose long-form content into multi-platform snippets.
 
- <br />
-  <br />
+---
 
-## Postiz Cloud vs. Open-source
+## 🔌 Supported Social Networks (38+ Connectors)
 
-Choose [Postiz Cloud](https://postiz.com/) for a fully managed experience, or deploy Postiz Open-source on your own infrastructure. Both provide the same core Postiz product and features.
+| Category | Supported Platforms |
+| :--- | :--- |
+| **Social & Microblogging** | X / Twitter (v2 API), Instagram (Graph API), Facebook Pages & Groups, Threads, Bluesky (AT Protocol), Mastodon |
+| **Video & Short-form** | YouTube (Data API v3 & Shorts), TikTok (Content Posting API), Kick |
+| **Professional & Publishing** | LinkedIn (Community & Page API), Pinterest (v5 API), Medium, WordPress, Dribbble |
+| **Community & Messaging** | Telegram (Bot API), Discord (Webhooks), Reddit (OAuth2), Skool Community Bridge, Slack |
+| **Decentralized & Web3** | Farcaster (Warpcast / Neynar), Nostr |
 
-We do not "gate" features or limit the license.
+---
 
-The main difference is the infrastructure you need to own, approval from social media providers, and deployment that might be hard at times (let your LLM deploy it)
+## 🛠️ Architecture & Tech Stack
 
-| Area | Postiz Cloud | Postiz Open-source (self-hosted) |
-|---|---|---|
-| **Cost** | Subscription per plan, 7-day free trial | Free forever (AGPL-3.0); you pay only for your own infra |
-| **Setup time** | Sign up and connect channels in minutes | Deploy with Docker / Coolify / Railway / any VPS; you configure Postgres, Redis, storage and env vars |
-| **Hosting & data** | Hosted by Postiz; data stored in our infrastructure | Runs on your own server; data never leaves your environment |
-| **Social platform apps** | Pre-approved apps for every channel, ready to use | You create your own developer apps on each platform and go through their approval (Meta, YouTube, TikTok can take weeks) |
-| **Channels** | Limited by plan tier | Unlimited, every supported provider |
-| **Posts per month** | Limited by plan tier | Unlimited |
-| **Team members** | Limited by plan tier | Unlimited |
-| **Scheduling, calendar views, cross-posting, repeated posts, post comments & delays, sets, signatures** | Included | Included |
-| **Internal & Global Plugs, RSS auto-post, customer groups** | Included per plan | Included |
-| **Analytics** | Included per plan | Included (requires your own app credentials with analytics scopes) |
-| **AI Copilot, AI images, AI videos** | Included with monthly quotas per plan; keys managed by Postiz | Available if you bring your own OpenAI (and other provider) API keys; no quota, you pay the provider |
-| **AI video clipping** | Included with monthly clipping minutes per plan | Requires your own provider keys and extra configuration |
-| **Smart Agent** | Included per plan | Available with your own LLM key |
-| **Public API & webhooks** | Included per plan | Included |
-| **Agentic surfaces (MCP, CLI, Claude / ChatGPT / Codex / OpenClaw / Cursor connectors)** | Included, hosted MCP endpoint | Included, you point the MCP / CLI at your own instance |
-| **Custom integrations** | Included per plan | Included; you can also modify the code and add providers |
-| **Updates & maintenance** | Automatic, zero downtime for you | You pull new images and run migrations yourself |
-| **Uptime, backups, security patches** | Managed by Postiz | Your responsibility |
-| **Support** | Priority support via Discord / email per plan | Community support on Discord and GitHub |
-| **Source access & customization** | No (SaaS) | Full source code, fork and modify freely under AGPL |
-| **Compliance / data residency** | Postiz-controlled regions | Any region or air-gapped environment you choose |
+```
+                          ┌─────────────────────────────────────┐
+                          │     Next.js 16 Web Application      │
+                          │   (Tailwind CSS, SWR, React Hook)   │
+                          └──────────────────┬──────────────────┘
+                                             │ HTTP / REST / SSE
+                          ┌──────────────────▼──────────────────┐
+                          │         NestJS Backend API          │
+                          │   (Auth, RBAC, Admin, Public API)   │
+                          └──────┬───────────┬───────────┬──────┘
+                                 │           │           │
+            ┌────────────────────▼──┐ ┌──────▼──────┐ ┌──▼───────────────────┐
+            │ PostgreSQL Multi-Tenant│ │ Redis Queue │ │  Temporal Orchestrator │
+            │      Prisma ORM       │ │   BullMQ    │ │   Durable Workflows   │
+            └───────────────────────┘ └─────────────┘ └───────────────────────┘
+```
 
-<br />
-<br />
-  
-## Postiz Compliance
+* **Frontend**: Next.js 16 (App Router), React 19, Tailwind CSS, SWR, Mantine UI.
+* **Backend**: NestJS, TypeScript, Express, Class-Validator, Passport JWT.
+* **Database & ORM**: PostgreSQL with Prisma ORM (multi-tenant schema isolation).
+* **Job Queue & Scheduling**: Redis 7, BullMQ, Temporal Workflow Engine.
+* **Media & Edge Storage**: Cloudflare R2 / S3-compatible object storage.
+* **AI Engine**: LangChain, OpenAI GPT-4o, Anthropic Claude 3.5.
+* **Monorepo Manager**: PNPM Workspaces.
 
-- This GitHub repository contains the open-source, self-hosted edition of Postiz. Postiz is also available as Postiz Cloud, a fully managed service at postiz.com.
-- Postiz hosted service uses official, platform-approved OAuth flows.
-- Postiz does not automate or scrape content from social media platforms.
-- Postiz does not collect, store, or proxy API keys or access tokens from users.
-- Postiz never asks users to paste API keys into our hosted product.
-- Postiz users always authenticate directly with the social platform (e.g., X, Discord, etc.), ensuring platform compliance and data privacy.
+---
 
-## License
+## 🚀 Quick Start
 
-This repository's source code is available under the [AGPL-3.0 license](LICENSE).
+### 1. Prerequisites
+* **Node.js**: `v20.x` or `v22.x`
+* **Package Manager**: `pnpm` (v10.6+)
+* **Database**: PostgreSQL 15+
+* **Cache**: Redis 6+
 
-<br /><br />
+### 2. Clone Repository
+```bash
+git clone https://github.com/Vishwakarmasuraj333/PulseSocial2.git
+cd PulseSocial2
+```
 
-<p align="center">
-  <img src="https://github.com/snyk-labs/secure-developer-sample-repo/raw/main/badge_full.svg" alt="Secure Developer Badge Full" width="150">
-</p>
+### 3. Install Dependencies
+```bash
+pnpm install
+```
+
+### 4. Configure Environment Variables
+Copy the `.env.example` file to `.env`:
+```bash
+cp .env.example .env
+```
+
+Ensure the key variables are configured:
+```env
+# Required
+DATABASE_URL="postgresql://postgres:password@localhost:5432/pulsesocial"
+REDIS_URL="redis://localhost:6379"
+JWT_SECRET="your-ultra-secure-jwt-secret-key"
+
+# URLs
+FRONTEND_URL="http://localhost:4200"
+NEXT_PUBLIC_BACKEND_URL="http://localhost:3000"
+BACKEND_INTERNAL_URL="http://localhost:3000"
+
+# Admin Configuration
+ADMIN_EMAIL="admin@pulsesocial.com"
+```
+
+### 5. Setup Database
+```bash
+pnpm run prisma-db-push
+```
+
+### 6. Run Development Servers
+
+**Run Frontend:**
+```bash
+pnpm run dev:frontend
+# Access at: http://localhost:4200
+```
+
+**Run Full Stack (Frontend + Backend + Orchestrator):**
+```bash
+pnpm run dev
+```
+
+---
+
+## 🖥️ Platform Navigation & Endpoints
+
+| Portal | Local URL | Access Level | Description |
+| :--- | :--- | :--- | :--- |
+| **Landing Page** | `http://localhost:4200` | Public | Platform overview, features showcase, and pricing |
+| **Sign In** | `http://localhost:4200/auth/login` | Public | Account authentication with demo autofill |
+| **Sign Up** | `http://localhost:4200/auth` | Public | Workspace registration and onboarding |
+| **Admin Command Center** | `http://localhost:4200/admin` | SuperAdmin | Tenant management, connector diagnostics, system health |
+| **Backend API** | `http://localhost:3000` | Authenticated | REST API endpoints and Swagger documentation |
+| **Swagger API Docs** | `http://localhost:3000/api` | Developers | Interactive OpenAPI / Swagger interface |
+
+---
+
+## 🔒 Security & Data Governance
+
+* **Zero Password Storage**: Social channel authentication strictly uses official OAuth2 flows; passwords for connected channels are never requested or stored.
+* **Encrypted Token Vault**: All OAuth refresh and access tokens are secured with AES-256 encryption at rest.
+* **Tenant Isolation**: Multi-tenant database boundaries enforced through organization-level Prisma query scopes.
+* **Role-Based Access Control (RBAC)**: Fine-grained permissions for `SUPERADMIN`, `ADMIN`, `EDITOR`, and `VIEWER`.
+
+---
+
+## 👨‍💻 Author & Maintainer
+
+* **Lead Architect**: [Suraj Vishwakarma](https://github.com/Vishwakarmasuraj333)
+* **Organization**: Pulse Media Global
+* **Repository**: [https://github.com/Vishwakarmasuraj333/PulseSocial2](https://github.com/Vishwakarmasuraj333/PulseSocial2)
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](LICENSE) file for full details.
+
+Developed with ❤️ by **Suraj Vishwakarma** &bull; **Pulse Media Global**

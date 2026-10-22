@@ -28,8 +28,8 @@ const nextConfig = {
   // Custom webpack config to optimize memory and stability
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
     if (dev) {
-      // Disable webpack filesystem cache in dev to avoid RangeError Array buffer allocation failed on Windows
-      config.cache = false;
+      // Use webpack memory cache in dev to avoid filesystem disk buffer allocation on Windows while keeping fast compilation
+      config.cache = { type: 'memory' };
     } else if (process.env.SENTRY_AUTH_TOKEN) {
       config.devtool = isServer ? 'source-map' : 'hidden-source-map';
     }
